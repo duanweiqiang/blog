@@ -328,7 +328,7 @@ example:
     {% endmacro %}`
 
 然后像下面使用
-
+    ``` html
    <div>{
        { input(
            "text", 
@@ -349,6 +349,7 @@ example:
             lname.errors
         )}
     }</div>
+    ```
 
 输出如下
 
