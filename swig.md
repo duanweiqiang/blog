@@ -3,8 +3,8 @@
     1.根据路劲渲染页面
     2.面向对象的模板继承，页面复用动态页面快速上手功能强大。
 
-##**Swig 使用指南**
-###**如何使用**
+**Swig 使用指南**
+**如何使用**
     API
     swig.init({
       allowErrors: false,   
@@ -17,7 +17,7 @@
       extensions: {},
       tzOffset: 0
     });
-###**options:**
+**options:**
 
 **allowErrors:** 
 
@@ -61,7 +61,7 @@
 
     添加第三方库，可以在编译模板时使用，参见参见自定义标签指南。
     
-##**nodejs**
+**nodejs**
     var tpl = swig.compileFile("path/to/template/file.html");
     var renderedHtml = tpl.render({ vars: 'to be inserted in template' });
     or
@@ -69,7 +69,7 @@
     var tpl = swig.compile("Template string here");
     var renderedHtml = tpl({ vars: 'to be inserted in template' });
     
-##**结合Express**
+**结合Express**
     npm install express
     npm install consolidate
 然后
@@ -77,7 +77,7 @@
     app.engine('.html', cons.swig);
     app.set('view engine', 'html');
     
-##**浏览器**
+**浏览器**
 Swig浏览器版本的api基本与nodejs版相同，不同点如下：
 
     不能使用swig.compileFile，浏览器没有文件系统
@@ -88,39 +88,39 @@ Swig浏览器版本的api基本与nodejs版相同，不同点如下：
     var mypage = swig.compile('{% extends "main" %}{% block content %}Oh hey there!{% endblock %}', { filename: 'mypage' });
     
     
-##**基础**
-###**swig的变量：**
+**基础**
+**swig的变量：**
     `{{ foo.bar }}`或`{{ foo['bar'] }}`
     //如果变量未定义，输出空字符。
 
-###**swig的标签：**
-####**extends**：使当前模板继承父模板，必须在文件最前
+**swig的标签：**
+**extends**：使当前模板继承父模板，必须在文件最前
 
     参数： file父模板相对模板root的相对路径，将在后面介绍如何实现模板继承。
 
-####**block：**定义一个块，使之可以被继承的模板重写，或者重写父模板的同名块，在继承`block`块时可以使用父模板中已定义的部分
+**block：**定义一个块，使之可以被继承的模板重写，或者重写父模板的同名块，在继承`block`块时可以使用父模板中已定义的部分
     
     参数： name块的名字，必须以字母数字下划线开头
 
-####**parent：**将父模板中同名块注入当前块中
+**parent：**将父模板中同名块注入当前块中
 
     {% block head %}
         {% parent %}
         <link rel="stylesheet" href="custom.css">
     {% endblock %} 
 
-####**include：**包含一个模板到当前位置，这个模板将使用当前上下文 
+**include：**包含一个模板到当前位置，这个模板将使用当前上下文 
     
     参数： file包含模板相对模板 root 的相对路径 
 
         {% include "a.html" %}
         {% include "template.js" %}
         //将引入的文件内容放到被引用的地方
-####**raw：**停止解析标记中任何内容，所有内容都将输出
+**raw：**停止解析标记中任何内容，所有内容都将输出
     
     参数： file父模板相对模板 root 的相对路径
 
-####**for：**遍历对象和数组
+**for：**遍历对象和数组
 
     参数：
     x：当前循环迭代名；
