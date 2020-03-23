@@ -3,8 +3,11 @@
     2.面向对象的模板继承，页面复用动态页面快速上手功能强大。
 
 #### Swig 使用指南
+
 **如何使用**
+
     *API:*
+
     `swig.init({
         allowErrors: false,   
         autoescape: true,
@@ -16,6 +19,7 @@
         extensions: {},
         tzOffset: 0
     });`
+    
 **options:**
 
 **allowErrors:** 
