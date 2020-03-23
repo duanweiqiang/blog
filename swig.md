@@ -6,7 +6,7 @@
 
 **如何使用**
 
-    *API:*
+    API:
 
     `swig.init({
         allowErrors: false,   
@@ -19,7 +19,7 @@
         extensions: {},
         tzOffset: 0
     });`
-    
+
 **options:**
 
 **allowErrors:** 
@@ -79,7 +79,7 @@
     `npm install express
     npm install consolidate`
 
-    -然后
+    然后
 
     `app.engine('.html', cons.swig);
     app.set('view engine', 'html');`
@@ -92,17 +92,25 @@
     你必须提前使用`swig.compile`编译好模板
     按顺序使用extends, import, and include，同时在swig.compile里使用参数templateKey来查找模板
 
-    `var template = swig.compile('<p>{% block content %}{% endblock %}</p>', { filename: 'main' });
-    var mypage = swig.compile('{% extends "main" %}{% block content %}Oh hey there!{% endblock %}', { filename: 'mypage' });`
+    `var template = swig.compile(
+        '<p>{% block content %}{% endblock %}</p>', 
+        { filename: 'main' }
+    );
+    var mypage = swig.compile(
+        '{% extends "main" %}{% block content %}Oh hey there!{% endblock %}', 
+        { filename: 'mypage' }
+    );`
     
     
 #### 基础
 
-***swig的变量：***
+*** swig的变量： ***
+
     `{{ foo.bar }}`或`{{ foo['bar'] }}`
     //如果变量未定义，输出空字符。
 
-***swig的标签：***
+*** swig的标签：***
+
 **extends**：
 
     使当前模板继承父模板，必须在文件最前
@@ -130,6 +138,7 @@
     `{% include "a.html" %}
     {% include "template.js" %}
     //将引入的文件内容放到被引用的地方`
+    
 **raw：**
 
     停止解析标记中任何内容，所有内容都将输出    
