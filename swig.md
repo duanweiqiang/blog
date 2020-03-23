@@ -8,7 +8,7 @@
 
     API:
 
-    `swig.init({
+    ```swig.init({
         allowErrors: false,   
         autoescape: true,
         cache: true,
@@ -18,13 +18,13 @@
         tags: {},
         extensions: {},
         tzOffset: 0
-    });`
+    });```
 
 **options:**
 
 **allowErrors:** 
 
-    默认值为 `false`。将所有模板解析和编译错误直接输出到模板。如果为 `true`，则将引发错误，抛出到 `Node.js` 进程中，可能会使您的应用程序崩溃。
+    默认值为 ```false```。将所有模板解析和编译错误直接输出到模板。如果为 ```true```，则将引发错误，抛出到 ```Node.js``` 进程中，可能会使您的应用程序崩溃。
     
 **autoescape:** 
 
@@ -138,7 +138,7 @@
     `{% include "a.html" %}
     {% include "template.js" %}
     //将引入的文件内容放到被引用的地方`
-    
+
 **raw：**
 
     停止解析标记中任何内容，所有内容都将输出    
