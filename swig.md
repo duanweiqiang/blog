@@ -325,12 +325,30 @@ example:
     `{% macro input type name id label value error %}
         <label for="{{ name }}">{{ label }}</label>
         <input type="{{ type }}" name="{{ name }}" id="{{ id }}" value="{{ value }}"{% if error %} class="error"{% endif %}>
-    {% endmacro %}
-`
+    {% endmacro %}`
+
 然后像下面使用
 
-   ` <div>{{ input("text", "fname", "fname", "First Name", fname.value, fname.errors) }}</div>
-    <div>{{ input("text", "lname", "lname", "Last Name", lname.value, lname.errors) }}</div>`
+   ` <div>{
+       { input(
+           "text", 
+            "fname", 
+            "fname", 
+            "First Name", 
+            fname.value, 
+            fname.errors
+        )}
+    }</div>
+    <div>{
+        { input(
+            "text", 
+            "lname",
+            "lname", 
+            "Last Name", 
+            lname.value, 
+            lname.errors
+        )}
+    }</div>`
 
 输出如下
 
