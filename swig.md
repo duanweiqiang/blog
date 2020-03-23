@@ -6,15 +6,15 @@
 **如何使用**
     *API:*
     `swig.init({
-      allowErrors: false,   
-      autoescape: true,
-      cache: true,
-      encoding: 'utf8',
-      filters: {},
-      root: '/',
-      tags: {},
-      extensions: {},
-      tzOffset: 0
+        allowErrors: false,   
+        autoescape: true,
+        cache: true,
+        encoding: 'utf8',
+        filters: {},
+        root: '/',
+        tags: {},
+        extensions: {},
+        tzOffset: 0
     });`
 **options:**
 
@@ -63,10 +63,11 @@
 **nodejs**
 
     `var tpl = swig.compileFile("path/to/template/file.html");
-    var renderedHtml = tpl.render({ vars: 'to be inserted in template' });
+    var renderedHtml = tpl.render({ vars: 'to be inserted in template' });`
+
     or
 
-    var tpl = swig.compile("Template string here");
+    `var tpl = swig.compile("Template string here");
     var renderedHtml = tpl({ vars: 'to be inserted in template' });`
     
 **结合Express**
