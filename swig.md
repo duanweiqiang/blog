@@ -7,6 +7,7 @@
 **如何使用**
 
 API:
+
     `swig.init({
         allowErrors: false,   
         autoescape: true,
