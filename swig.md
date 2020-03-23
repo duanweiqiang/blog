@@ -66,13 +66,13 @@ API:
     
 **nodejs**
 
-    `var tpl = swig.compileFile("path/to/template/file.html");
-    var renderedHtml = tpl.render({ vars: 'to be inserted in template' });`
+        `var tpl = swig.compileFile("path/to/template/file.html");
+        var renderedHtml = tpl.render({ vars: 'to be inserted in template' });`
 
     or
 
-    `var tpl = swig.compile("Template string here");
-    var renderedHtml = tpl({ vars: 'to be inserted in template' });`
+        `var tpl = swig.compile("Template string here");
+        var renderedHtml = tpl({ vars: 'to be inserted in template' });`
     
 **结合Express**
 
@@ -92,14 +92,14 @@ API:
     你必须提前使用`swig.compile`编译好模板
     按顺序使用extends, import, and include，同时在swig.compile里使用参数templateKey来查找模板
 
-    `var template = swig.compile(
-        '<p>{% block content %}{% endblock %}</p>', 
-        { filename: 'main' }
-    );
-    var mypage = swig.compile(
-        '{% extends "main" %}{% block content %}Oh hey there!{% endblock %}', 
-        { filename: 'mypage' }
-    );`
+        `var template = swig.compile(
+            '<p>{% block content %}{% endblock %}</p>', 
+            { filename: 'main' }
+        );
+        var mypage = swig.compile(
+            '{% extends "main" %}{% block content %}Oh hey there!{% endblock %}', 
+            { filename: 'mypage' }
+        );`
     
     
 #### 基础
@@ -125,19 +125,19 @@ API:
 
     将父模板中同名块注入当前块中:
 
-    `{% block head %}
-        {% parent %}
-        <link rel="stylesheet" href="custom.css">
-    {% endblock %} `
+        `{% block head %}
+            {% parent %}
+            <link rel="stylesheet" href="custom.css">
+        {% endblock %} `
 
 **include：**
 
     包含一个模板到当前位置，这个模板将使用当前上下文 
     参数： file包含模板相对模板 root 的相对路径 
 
-    `{% include "a.html" %}
-    {% include "template.js" %}
-    //将引入的文件内容放到被引用的地方`
+        `{% include "a.html" %}
+        {% include "template.js" %}
+        //将引入的文件内容放到被引用的地方`
 **raw：**
 
     停止解析标记中任何内容，所有内容都将输出    
@@ -151,9 +151,9 @@ API:
         in:语法标记；
         y:可迭代对象。
     
-    `{% for x in y %}
-        {{ x }}
-    {% endfor %}`
+        `{% for x in y %}
+            {{ x }}
+        {% endfor %}`
         
 特殊循环变量 
 
@@ -170,11 +170,11 @@ example：
     
     eg1------------------------------
     
-        {% for x in y %}
+        `{% for x in y %}
             {% if loop.first %}<ul>{% endif %}
             <li>{{ loop.index }} - {{ loop.key }}: {{ x }}</li>
             {% if loop.last %}</ul>{% endif %}
-        {% endfor %}
+        {% endfor %}`
    
     eg2 ------------------------------
     
@@ -386,6 +386,7 @@ example:
     用 `\` 转义字符串
     
 **capitalize** 
+
     大写首字母
     
 **date(format[, tzOffset])** 
@@ -403,6 +404,7 @@ example:
     同`escape`
 
 **escape([type])** 
+
     转义字符
     默认： &, <, >, ", ' 
     js: &, <, >, ", ', =, -, ;
