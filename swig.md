@@ -66,20 +66,20 @@ API:
     
 **nodejs**
 
-        `var tpl = swig.compileFile("path/to/template/file.html");
-        var renderedHtml = tpl.render({ vars: 'to be inserted in template' });`
+    `var tpl = swig.compileFile("path/to/template/file.html");
+    var renderedHtml = tpl.render({ vars: 'to be inserted in template' });`
 
-    or
+or
 
-        `var tpl = swig.compile("Template string here");
-        var renderedHtml = tpl({ vars: 'to be inserted in template' });`
+    `var tpl = swig.compile("Template string here");
+    var renderedHtml = tpl({ vars: 'to be inserted in template' });`
     
 **结合Express**
 
     `npm install express
     npm install consolidate`
 
-    然后
+然后
 
     `app.engine('.html', cons.swig);
     app.set('view engine', 'html');`
