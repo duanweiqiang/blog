@@ -6,9 +6,8 @@
 
 **如何使用**
 
-    API:
-    
-    swig.init({
+API:
+    `swig.init({
         allowErrors: false,   
         autoescape: true,
         cache: true,
@@ -18,7 +17,7 @@
         tags: {},
         extensions: {},
         tzOffset: 0
-    });
+    });`
 
 **options:**
 
