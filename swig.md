@@ -7,8 +7,8 @@
 **如何使用**
 
     API:
-
-    `swig.init({
+    ```
+    swig.init({
         allowErrors: false,   
         autoescape: true,
         cache: true,
@@ -18,7 +18,8 @@
         tags: {},
         extensions: {},
         tzOffset: 0
-    });`
+    });
+    ```
 
 **options:**
 
@@ -104,7 +105,7 @@
     
 #### 基础
 
-*** swig的变量： ***
+***swig的变量：***
 
     `{{ foo.bar }}`或`{{ foo['bar'] }}`
     //如果变量未定义，输出空字符。
