@@ -2,10 +2,10 @@
 title: 你不知道浏览器debug方法
 date: 2020-11-13 11:12:57
 img: /medias/featureimages/6.jpg
-top: true
+top: false
 cover: true
 coverImg: /medias/featureimages6.jpg
-toc: true
+toc: false
 mathjax: false
 summary: 因为工作中，经常涉及到前端后台数据交互，js测试，性能优化，前端js操作dom，ajax接口调试等都会比较麻烦，所以会前端调试非常重要，尤其对于工程优化方面能给我们一个简单直接的分析工具。
 categories: 前端
