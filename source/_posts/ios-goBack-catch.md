@@ -2,10 +2,10 @@
 title: ios safari 返回时不执行代码问题解析
 date: 2020-12-22 21:12:57
 img: /medias/featureimages/7.jpg
-top: true
+top: false
 cover: true
 coverImg: /medias/featureimages7.jpg
-toc: true
+toc: false
 mathjax: false
 summary: 最近在调试钉钉/企业微信时发现一个问题，在ios上使用返回键时，上一页的内容不执行js代码，导致react的生命周期，包componentDidMount都不执行，由于这两个平台都没有开发者工具，无法进行调试着实废了一番功夫。
 categories: 前端
