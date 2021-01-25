@@ -76,7 +76,7 @@ tags:
             ├── index.less
             └── index.tsx
         └── app.ts
-  balabala ... 这里省略一万字（具体看文档就可以了
+  balabala ... 这里省略一万字（具体看文档就可以了)
   ```
 
 ##### umi老的项目配置
